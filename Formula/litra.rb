@@ -1,9 +1,9 @@
 class Litra < Formula
   desc "Control your Logitech Litra light from the command line"
   homepage "https://github.com/timrogers/litra-rs"
-  url "https://github.com/timrogers/litra-rs/releases/download/v0.3.0/litra_v0.3.0_darwin-amd64"
-  sha256 "aa68bbf12cb92dad4f2c08020ee0d1cbb56b762fa4eb99ba38ae177f0de2690f"
-  version "0.3.0"
+  url "https://github.com/timrogers/litra-rs/releases/download/v1.0.0/litra_v1.0.0_darwin-amd64"
+  sha256 "88971b78c2f27667a07d4962e18e18734064c9962ac03d28456e66e0ac386ddd"
+  version "1.0.0"
 
   def install
     bin.install "litra_v#{version}_darwin-amd64" => "litra"
