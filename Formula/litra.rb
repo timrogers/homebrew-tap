@@ -6,6 +6,6 @@ class Litra < Formula
   version "1.4.0"
 
   def install
-    bin.install "litra_v#{version}_darwin-amd64" => "litra"
+    bin.install "litra_v#{version}_darwin-universal" => "litra"
   end
 end
