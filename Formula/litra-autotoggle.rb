@@ -1,9 +1,9 @@
 class LitraAutotoggle < Formula
   desc 'Automatically turn your Logitech Litra device on when your webcam turns on, and off when your webcam turns off (macOS and Linux only)'
   homepage 'https://github.com/timrogers/litra-autotoggle'
-  url 'TODO'
-  sha256 'TODO'
-  version '0.0.1'
+  url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.1.0/litra-autotoggle_v0.1.0_darwin-universal'
+  sha256 '284578d2ec5cee619f9ec72f93d1e4d6f9dd7b9893e311e968493345c8d31af0'
+  version '0.1.0'
 
   def install
     bin.install "litra-autotoggle_v#{version}_darwin-universal" => 'litra-autotoggle'
