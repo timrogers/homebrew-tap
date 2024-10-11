@@ -18,9 +18,9 @@ class Litra < Formula
 
   def install
     if OS.mac?
-      bin.install "litra-#{version}_darwin-universal" => 'litra'
+      bin.install "litra-v#{version}_darwin-universal" => 'litra'
     else
-      bin.install "litra-#{version}_linux-amd64" => 'litra'
+      bin.install "litra-v#{version}_linux-amd64" => 'litra'
     end
   end
 
