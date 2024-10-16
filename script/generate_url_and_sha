@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <download_url>"
+    exit 1
+fi
+
+# Check if curl is installed
+if ! command -v curl &>/dev/null; then
+    echo "Error: curl is not installed"
+    exit 1
+fi
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+    *)
+        DOWNLOAD_URL="$1"
+        shift
+        ;;
+    esac
+done
+
+# Download DOWNLOAD_URL to a temporary file
+TEMP_FILE=$(mktemp)
+curl -sSL "$DOWNLOAD_URL" -o "$TEMP_FILE"
+
+# Calculate the SHA256 hash of the temporary file
+SHA256_HASH=$(sha256sum "$TEMP_FILE" | cut -d " " -f 1)
+
+# Print the URL and SHA256 hash
+echo "url '$DOWNLOAD_URL'"
+echo "sha256 '$SHA256_HASH'"
