@@ -1,18 +1,18 @@
 class Litra < Formula
   desc 'Control your Logitech Litra light from the command line'
   homepage 'https://github.com/timrogers/litra-rs'
-  version '2.1.0'
+  version '2.2.0'
 
   if OS.mac?
-    url 'https://github.com/timrogers/litra-rs/releases/download/v2.1.0/litra_v2.1.0_darwin-universal'
-    sha256 '8a107bdfe1646b9584a2c26ca4730c64de67df91c03dfc2a490462c8dca1e57f'
+    url 'https://github.com/timrogers/litra-rs/releases/download/v2.2.0/litra_v2.2.0_darwin-universal'
+    sha256 'b366983191a649036c7f267a7667938f9a22176bdf83e94fdf9f768a50512040'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/litra-rs/releases/download/v2.1.0/litra_v2.1.0_linux-aarch64'
-      sha256 '0848a3a99ca4e76dd56b26bed472a8d5bd11ce44b92377d9f5c389e8df8f2ac9'
+      url 'https://github.com/timrogers/litra-rs/releases/download/v2.2.0/litra_v2.2.0_linux-aarch64'
+      sha256 '38ec3aad8c39fe1e557b63ff681dd7a40a9ed8d31da0dd44af419afb9a280877'
     else
-      url 'https://github.com/timrogers/litra-rs/releases/download/v2.1.0/litra_v2.1.0_linux-amd64'
-      sha256 '458b9536bac6a151a0a4adf0f7765cec6f0ef8f5a5b6b2c8d1b10ae933d40acc'
+      url 'https://github.com/timrogers/litra-rs/releases/download/v2.2.0/litra_v2.2.0_linux-amd64'
+      sha256 '46eda3437c3a333c157c52f644ad9bec6424efbb50f2b074d625e7ce9794c811'
     end
   end
 
