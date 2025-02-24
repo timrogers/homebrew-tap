@@ -1,19 +1,19 @@
 class LitraAutotoggle < Formula
   desc 'Automatically turn your Logitech Litra device on when your webcam turns on, and off when your webcam turns off (macOS and Linux only)'
   homepage 'https://github.com/timrogers/litra-autotoggle'
-  version '0.6.0'
+  version '0.6.1'
 
   # Set the URL and SHA256 based on the platform
   if OS.mac?
-    url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.0/litra-autotoggle_v0.6.0_darwin-universal'
-    sha256 '5f0d9390161efdfdbde4c097b1784f2914a0edfe907ef018d23f90e38f01e46b'
+    url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.1/litra-autotoggle_v0.6.1_darwin-universal'
+    sha256 'fa133662d0a0e46672ba2fa778e80dff194e72c6061c2f07b821e27f25fe4a8f'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.0/litra-autotoggle_v0.6.0_linux-aarch64'
-      sha256 '21bf0a04abb3393b8036c460effaa0e3c759afa93ab69d71b7ef63b405d401c5'
+      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.1/litra-autotoggle_v0.6.1_linux-aarch64'
+      sha256 'e1f0e3e51337404e36897d5b16312f60b83cca3ef9a6cf2bca1bb56cc7fb01ed'
     else
-      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.0/litra-autotoggle_v0.6.0_linux-amd64'
-      sha256 '2c083f44e82b6ed9cae55ef268397c792af231cdcb18d2ff5b4fa38f1afc4a9e'
+      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.6.1/litra-autotoggle_v0.6.1_linux-amd64'
+      sha256 '6a7bffba2b4b359032e431b5f2e06ba291617066ca82913e0cbb598177cc9c05'
     end
   end
 
