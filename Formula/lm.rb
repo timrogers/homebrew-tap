@@ -1,21 +1,28 @@
 class Lm < Formula
   desc 'Control your La Marzocco espresso machine from the command line'
   homepage 'https://github.com/timrogers/lm'
-  version '0.1.0'
+  version '0.2.0'
 
   if OS.mac?
-    url 'https://github.com/timrogers/lm/releases/download/v0.1.0/lm-macos-x86_64'
-    sha256 '277262df83754d4ace021f088d699afdb6b6c98ac34cc6e957ba451d644ff8b4'
+    url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_darwin-universal'
+    sha256 'c0491ea1e32f1b87c70959c9e50a21e46fe600131805192a925dfd2243c26d36'
   elsif OS.linux?
-    url 'https://github.com/timrogers/lm/releases/download/v0.1.0/lm-linux-x86_64'
-    sha256 '0dedae5016f50cd77ba8caa4cb32d637bb71ad0da16a00828e584d5e0482cf0a'
+    if Hardware::CPU.arm?
+      url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_linux-aarch64'
+      sha256 '9777c6d3aaed0eeef77176cd3f8fa1c5253179e4ee9240284eab38ef49382e69'
+    else
+      url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_linux-amd64'
+      sha256 'aea0580dc5a08fc5bd84e95a7ca04f1366b53f02ef97c77936dadb20c681ee82'
+    end
   end
 
   def install
     if OS.mac?
-      bin.install 'lm-macos-x86_64' => 'lm'
+      bin.install "lm_v#{version}_darwin-universal" => 'lm'
+    elsif Hardware::CPU.arm?
+      bin.install "lm_v#{version}_linux-aarch64" => 'lm'
     else
-      bin.install 'lm-linux-x86_64' => 'lm'
+      bin.install "lm_v#{version}_linux-amd64" => 'lm'
     end
   end
 
