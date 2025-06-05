@@ -1,18 +1,18 @@
 class Lm < Formula
   desc 'Control your La Marzocco espresso machine from the command line'
   homepage 'https://github.com/timrogers/lm'
-  version '0.2.0'
+  version '0.2.1'
 
   if OS.mac?
-    url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_darwin-universal'
-    sha256 'c0491ea1e32f1b87c70959c9e50a21e46fe600131805192a925dfd2243c26d36'
+    url 'https://github.com/timrogers/lm/releases/download/v0.2.1/lm_v0.2.1_darwin-universal'
+    sha256 '6b748035ea3bca564711b9d619050c8611cce05284ee3b9f8667c31ba031f241'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_linux-aarch64'
-      sha256 '9777c6d3aaed0eeef77176cd3f8fa1c5253179e4ee9240284eab38ef49382e69'
+      url 'https://github.com/timrogers/lm/releases/download/v0.2.1/lm_v0.2.1_linux-aarch64'
+      sha256 'f9bdde2f72e764e5d5e7243e004c3215b966867a228b30c1867cf2c591a5de44'
     else
-      url 'https://github.com/timrogers/lm/releases/download/v0.2.0/lm_v0.2.0_linux-amd64'
-      sha256 'aea0580dc5a08fc5bd84e95a7ca04f1366b53f02ef97c77936dadb20c681ee82'
+      url 'https://github.com/timrogers/lm/releases/download/v0.2.1/lm_v0.2.1_linux-amd64'
+      sha256 '70a191498f4db4f2a94a646bdb9297a4aefb23bd10d0169b1254089299ef6de0'
     end
   end
 
