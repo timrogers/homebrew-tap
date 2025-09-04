@@ -1,18 +1,18 @@
 class Csvmd < Formula
   desc 'Convert a CSV file to a Markdown table 📊'
   homepage 'https://github.com/timrogers/csvmd'
-  version '0.2.0'
+  version '0.3.0'
 
   if OS.mac?
-    url 'https://github.com/timrogers/csvmd/releases/download/v0.2.0/csvmd_v0.2.0_darwin-universal'
-    sha256 'b9eb218baa1bd237da3223ad4df85e5b6d3c958989d0a3cafbf227c9322505d8'
+    url 'https://github.com/timrogers/csvmd/releases/download/v0.3.0/csvmd_v0.3.0_darwin-universal'
+    sha256 '556bdc3875c17d7c9f213febf318f0598f4c349c19df3b55d0237366b9704534'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/csvmd/releases/download/v0.2.0/csvmd_v0.2.0_linux-aarch64'
-      sha256 'bcb57242c369ba5284f31fcd392a97e93281a3ed2f39af4b2083623fcd03540b'
+      url 'https://github.com/timrogers/csvmd/releases/download/v0.3.0/csvmd_v0.3.0_linux-aarch64'
+      sha256 '788ce2572ccae31b3203f376427c2be0e842986bb61606821061bf95960bba8b'
     else
-      url 'https://github.com/timrogers/csvmd/releases/download/v0.2.0/csvmd_v0.2.0_linux-amd64'
-      sha256 '95ec5dc4a618a4560fbe1534a19c39adc81b7baf6bdd6000ac9a00ae057d6c81'
+      url 'https://github.com/timrogers/csvmd/releases/download/v0.3.0/csvmd_v0.3.0_linux-amd64'
+      sha256 '6c64d16ed64e2f538296564041df6c1275c2906b19303159b95af0e88653e8a8'
     end
   end
 
