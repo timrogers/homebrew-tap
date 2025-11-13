@@ -1,18 +1,18 @@
 class Wld < Formula
   desc '💡 Control WLED lights from the command line or your preferred MCP client'
   homepage 'https://github.com/timrogers/wld'
-  version '0.0.1'
+  version '0.0.2'
 
   if OS.mac?
-    url 'https://github.com/timrogers/wld/releases/download/v0.0.1/wld_v0.0.1_darwin-universal'
-    sha256 '39b4c301ff4ca67255d628b46330084c6cd38472a27428b538a2b97d429c3bb4'
+    url 'https://github.com/timrogers/wld/releases/download/v0.0.2/wld_v0.0.2_darwin-universal'
+    sha256 '058b18a4fa46a213c75d79a078372adb5d7051ff0b2d593496e14ea546c64700'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/wld/releases/download/v0.0.1/wld_v0.0.1_linux-aarch64'
-      sha256 'c9d318a8bacba9e525164b3bc02a080b5b5c39344be03cd9492103b6c7a56796'
+      url 'https://github.com/timrogers/wld/releases/download/v0.0.2/wld_v0.0.2_linux-aarch64'
+      sha256 '2450a668ba3a7b47e8ba0460dfec144c7f199a73232c0c6ad1f7658ae312202f'
     else
-      url 'https://github.com/timrogers/wld/releases/download/v0.0.1/wld_v0.0.1_linux-amd64'
-      sha256 '4e55115f6cf963a650226ec1a5db34be2b8849fa751a4c553f8b1a841d0dfa2a'
+      url 'https://github.com/timrogers/wld/releases/download/v0.0.2/wld_v0.0.2_linux-amd64'
+      sha256 'aa09b2f7efe801dfb1c6eb6fbbd5d304a13a2921f51c151e6ffcc8f8cae89f10'
     end
   end
 
