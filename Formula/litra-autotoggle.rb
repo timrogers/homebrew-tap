@@ -5,15 +5,15 @@ class LitraAutotoggle < Formula
 
   # Set the URL and SHA256 based on the platform
   if OS.mac?
-    url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.7.0/litra-autotoggle_v0.7.0_darwin-universal'
-    sha256 'f7ee3ce1cbc5343d5aee42f054eb1d0be97bead1f6ef2e3249c515d8a0a74339'
+    url 'https://github.com/timrogers/litra-autotoggle/releases/download/v1.0.0/litra-autotoggle_v1.0.0_darwin-universal'
+    sha256 '94fe0265132e7d726bf84c3436ea55b4c744e7629f25b9b844ef9f4aaa2c5b51'
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.7.0/litra-autotoggle_v0.7.0_linux-aarch64'
-      sha256 '520311751cf356f160c7b7c638a41143839bc88d3b8b3113f79f3347b078f045'
+      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v1.0.0/litra-autotoggle_v1.0.0_linux-aarch64'
+      sha256 '660e23f9ad44201faec675dcb45843f2f86b25d88528f00c929e9caa6367bfda'
     else
-      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v0.7.0/litra-autotoggle_v0.7.0_linux-amd64'
-      sha256 '9b8945e775de08d8d1618231100b3cafb894aa162de1c4e812757dd89acf2d63'
+      url 'https://github.com/timrogers/litra-autotoggle/releases/download/v1.0.0/litra-autotoggle_v1.0.0_linux-amd64'
+      sha256 '3dd0a8e2266e9f0053f20e52c7488d6067c4a01ffbf52b3708d1bb4332f117b7'
     end
   end
 
@@ -25,10 +25,24 @@ class LitraAutotoggle < Formula
     else
       bin.install "litra-autotoggle_v#{version}_linux-amd64" => 'litra-autotoggle'
     end
+
+    (buildpath / 'litra-autotoggle.yml').write <<~YAML
+      # By default, the background service will control all connected Litra devices.
+      # To specify particular devices or configure other advanced options, uncomment
+      # and modify the example below.
+      #
+      # device_type: glow
+      # serial_number: ABCD1
+      # video_device: /dev/video0
+      # device_path: DevSrvsID:4296789687
+      # delay: 2000
+    YAML
+
+    etc.install 'litra-autotoggle.yml'
   end
 
   service do
-    run opt_bin / 'litra-autotoggle'
+    run [opt_bin / 'litra-autotoggle', '--config', etc / 'litra-autotoggle.yml']
     keep_alive crashed: true
   end
 
