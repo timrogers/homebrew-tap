@@ -41,6 +41,14 @@ class LitraAutotoggle < Formula
     etc.install 'litra-autotoggle.yml'
   end
 
+  def caveats
+    <<~CAVEAT
+      🎉 litra-autotoggle v1.x adds a new easy way to configure the tool when running in the background as a Homebrew service - but it also introduces a breaking change to how we decide what devices to control.
+
+      For more information, see https://github.com/timrogers/litra-autotoggle/releases/tag/v1.0.0.
+    CAVEAT
+  end
+
   service do
     run [opt_bin / 'litra-autotoggle', '--config', etc / 'litra-autotoggle.yml']
     keep_alive crashed: true

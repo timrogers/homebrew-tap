@@ -26,6 +26,14 @@ class Litra < Formula
     end
   end
 
+  def caveats
+    <<~CAVEAT
+      🎉 litra v3.x adds support for the colorful back side of Litra Beam LX devices - but also includes breaking changes that may impact you if you're using the `litra devices --json` command and parsing the result.
+
+      For more information, see https://github.com/timrogers/litra-rs/releases/tag/v3.0.0.
+    CAVEAT
+  end
+
   test do
     assert_match "litra v#{version}", shell_output("#{bin}/litra --version").strip
   end
