@@ -1,7 +1,7 @@
 class LitraAutotoggle < Formula
   desc 'Automatically turn your Logitech Litra device on when your webcam turns on, and off when your webcam turns off (macOS and Linux only)'
   homepage 'https://github.com/timrogers/litra-autotoggle'
-  version '0.7.0'
+  version '1.0.0'
 
   # Set the URL and SHA256 based on the platform
   if OS.mac?
