@@ -50,7 +50,7 @@ class LitraAutotoggle < Formula
   end
 
   service do
-    run [opt_bin / 'litra-autotoggle', '--config', etc / 'litra-autotoggle.yml']
+    run [opt_bin / 'litra-autotoggle', '--config-file', etc / 'litra-autotoggle.yml']
     keep_alive crashed: true
   end
 
