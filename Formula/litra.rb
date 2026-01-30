@@ -2,6 +2,8 @@ class Litra < Formula
   desc 'Control Logitech Litra lights from the command line and Model Context Protocol (MCP) clients'
   homepage 'https://github.com/timrogers/litra-rs'
   version '3.1.1'
+  
+  deprecate! date: '2026-01-30', because: 'is now available via Homebrew Core with `brew install litra`'
 
   if OS.mac?
     url 'https://github.com/timrogers/litra-rs/releases/download/v3.1.1/litra_v3.1.1_darwin-universal'
