@@ -1,9 +1,9 @@
 class Formanator < Formula
   desc "Submit and manage Forma (https://joinforma.com) claims from the command line and Model Context Protocol (MCP) clients"
   homepage "https://github.com/timrogers/formanator"
-  version "4.0.0"
-  url 'https://github.com/timrogers/formanator/archive/refs/tags/v4.0.0.tar.gz'
-  sha256 '81e282e9324e998b5031d07b38656bc47780bcb60c112d636e6960cfccb9d3e3'
+  version "5.0.0"
+  url 'https://github.com/timrogers/formanator/archive/refs/tags/v5.0.0.tar.gz'
+  sha256 'f8994fb86d2f7b9eae22ec91858046772eac104d6a65106802af8ff63ed6348b'
   license "MIT"
   head "https://github.com/timrogers/formanator.git", branch: "main"
 
